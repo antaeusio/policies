@@ -1,0 +1,341 @@
+{
+  "schemaVersion": "1",
+  "sources": [
+    {
+      "id": "amazon-conditions",
+      "organization": "Amazon",
+      "title": "Conditions of Use",
+      "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM",
+      "category": "commerce",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "unavailable"
+      },
+      "scope_notes": "Discovery returned HTTP 503; no policy extracted. General conditions do not cover every seller or listing rule."
+    },
+    {
+      "id": "etsy-sellers",
+      "organization": "Etsy",
+      "title": "Seller Policy",
+      "url": "https://www.etsy.com/legal/sellers/",
+      "category": "commerce",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Seller requirements include obligations that depend on account, product and transaction facts."
+    },
+    {
+      "id": "etsy-prohibited",
+      "organization": "Etsy",
+      "title": "Prohibited Items Policy",
+      "url": "https://www.etsy.com/legal/prohibited/",
+      "category": "commerce",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Restrictions and exceptions may require item facts beyond listing text."
+    },
+    {
+      "id": "ebay-prohibited",
+      "organization": "eBay",
+      "title": "Prohibited and restricted items",
+      "url": "https://www.ebay.com/help/policies/prohibited-restricted-items/prohibited-restricted-items?id=4207",
+      "category": "commerce",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Index page: category restrictions live in linked policies; this page alone is incomplete."
+    },
+    {
+      "id": "shopify-aup",
+      "organization": "Shopify",
+      "title": "Acceptable Use Policy",
+      "url": "https://www.shopify.com/legal/aup",
+      "category": "commerce",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Acceptable use only; merchant legal duties and related policies are separate."
+    },
+    {
+      "id": "stripe-restricted",
+      "organization": "Stripe",
+      "title": "Prohibited and Restricted Businesses",
+      "url": "https://stripe.com/legal/restricted-businesses",
+      "category": "payments",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Business type, country and prior approval affect restrictions."
+    },
+    {
+      "id": "paypal-aup-us",
+      "organization": "PayPal",
+      "title": "Acceptable Use Policy (US)",
+      "url": "https://www.paypal.com/us/legalhub/paypal/acceptableuse-full",
+      "category": "payments",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "US version; some activities require prior approval and additional facts."
+    },
+    {
+      "id": "github-aup",
+      "organization": "GitHub",
+      "title": "Acceptable Use Policies",
+      "url": "https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies",
+      "category": "developer",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Repository content and use are subject to additional linked policies."
+    },
+    {
+      "id": "discord-guidelines",
+      "organization": "Discord",
+      "title": "Community Guidelines",
+      "url": "https://discord.com/guidelines",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Age, context and linked policy explainers can affect applicability."
+    },
+    {
+      "id": "reddit-rules",
+      "organization": "Reddit",
+      "title": "Reddit Rules",
+      "url": "https://redditinc.com/policies/reddit-rules",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Site-wide rules; individual community rules are additional."
+    },
+    {
+      "id": "youtube-guidelines",
+      "organization": "YouTube",
+      "title": "Community Guidelines",
+      "url": "https://support.google.com/youtube/answer/9288567",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Overview with linked detailed policies; a text-only check cannot assess video or images."
+    },
+    {
+      "id": "tiktok-guidelines",
+      "organization": "TikTok",
+      "title": "Community Guidelines overview",
+      "url": "https://www.tiktok.com/community-guidelines/en/overview",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Overview with linked detailed policies; audiovisual context remains outside a text-only check."
+    },
+    {
+      "id": "linkedin-community",
+      "organization": "LinkedIn",
+      "title": "Professional Community Policies",
+      "url": "https://www.linkedin.com/legal/professional-community-policies",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Content policy; profile identity and account facts may be necessary."
+    },
+    {
+      "id": "meta-community",
+      "organization": "Meta",
+      "title": "Community Standards",
+      "url": "https://transparency.meta.com/policies/community-standards/",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "unavailable"
+      },
+      "scope_notes": "Discovery could not retrieve this page; no policy extracted."
+    },
+    {
+      "id": "x-rules",
+      "organization": "X",
+      "title": "The X Rules",
+      "url": "https://help.x.com/en/rules-and-policies/x-rules",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Overview; linked policy details and enforcement context must be considered."
+    },
+    {
+      "id": "openai-usage",
+      "organization": "OpenAI",
+      "title": "Usage policies",
+      "url": "https://openai.com/policies/usage-policies/",
+      "category": "ai",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Application use and domain context matter; content alone cannot prove compliance."
+    },
+    {
+      "id": "anthropic-aup",
+      "organization": "Anthropic",
+      "title": "Usage Policy",
+      "url": "https://www.anthropic.com/legal/aup",
+      "category": "ai",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Use restrictions include application and activity facts outside text."
+    },
+    {
+      "id": "aws-aup",
+      "organization": "AWS",
+      "title": "Acceptable Use Policy",
+      "url": "https://aws.amazon.com/aup/",
+      "category": "hosting",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Service use, infrastructure and security facts may be required."
+    },
+    {
+      "id": "google-cloud-aup",
+      "organization": "Google Cloud",
+      "title": "Acceptable Use Policy",
+      "url": "https://cloud.google.com/terms/aup",
+      "category": "hosting",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Service use and linked agreements extend beyond submitted text."
+    },
+    {
+      "id": "digitalocean-aup",
+      "organization": "DigitalOcean",
+      "title": "Acceptable Use Policy",
+      "url": "https://www.digitalocean.com/legal/acceptable-use-policy",
+      "category": "hosting",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Service operation and external activity cannot be inferred from content alone."
+    },
+    {
+      "id": "slack-aup",
+      "organization": "Slack",
+      "title": "Acceptable Use Policy",
+      "url": "https://slack.com/intl/en-us/acceptable-use-policy",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "pending"
+      },
+      "scope_notes": "Regional URL selected explicitly to avoid locale-dependent redirects; needs retrieval verification."
+    },
+    {
+      "id": "vercel-aup",
+      "organization": "Vercel",
+      "title": "Acceptable Use Policy",
+      "url": "https://vercel.com/legal/acceptable-use-policy",
+      "category": "hosting",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Service behavior and account context remain outside text-only checking."
+    },
+    {
+      "id": "netlify-aup",
+      "organization": "Netlify",
+      "title": "Acceptable Use Policy",
+      "url": "https://www.netlify.com/legal/acceptable-use-policy/",
+      "category": "hosting",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Service behavior and linked agreements may require additional context."
+    },
+    {
+      "id": "google-ads-policies",
+      "organization": "Google Ads",
+      "title": "Advertising policies",
+      "url": "https://support.google.com/adspolicy/answer/6008942",
+      "category": "advertising",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-10",
+        "result": "readable"
+      },
+      "scope_notes": "Overview; landing page, region, business verification and linked policies are additional."
+    }
+  ]
+}
