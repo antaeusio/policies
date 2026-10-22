@@ -122,6 +122,24 @@ def bounded_text(value, maximum=4096):
     return isinstance(value, str) and bool(value.strip()) and len(value.encode("utf-8")) <= maximum
 
 
+def verify_browser_observation(observation):
+    exact(observation, "method selector element_index matched_elements text_property normalization text_sha256 text_bytes http_response_sha256 response_linkage authentication")
+    if (observation["method"] != "browser-dom"
+            or observation["text_property"] != "innerText" or observation["normalization"] != "none"
+            or observation["authentication"] != "public-no-sign-in"
+            or observation["http_response_sha256"] is not None
+            or observation["response_linkage"] != "not-established"
+            or not bounded_text(observation["selector"], 1000)):
+        raise ValueError("browser observation assertion")
+    count, index, size = [observation[k] for k in ["matched_elements", "element_index", "text_bytes"]]
+    if (type(count) is not int or not 1 <= count <= 256
+            or type(index) is not int or not 0 <= index < count
+            or type(size) is not int or not 1 <= size <= 1024 * 1024
+            or not isinstance(observation["text_sha256"], str)
+            or not re.fullmatch(r"[0-9a-f]{64}", observation["text_sha256"])):
+        raise ValueError("browser observation identity")
+
+
 def digest(value):
     # Policy and input identities here contain only ASCII keys and string values.
     # This restricted JSON domain has the same serialization as RFC 8785; general
@@ -190,10 +208,20 @@ def verify_version(entry, sources, root):
         exact(rule, "id when outcome")
         if not IDENTIFIER.fullmatch(rule["id"]) or not rule["when"].strip() or rule["outcome"] not in {"allow", "review", "deny"}:
             raise ValueError("rule shape")
-    exact(provenance, "schema_version source_id version_id source_url final_url language region retrieved_at source_effective_date response_sha256 extracted_text_sha256 extractor source_snapshot_retained authoring policy_digest cli_version scope semantic_evaluation")
+    provenance_fields = "schema_version source_id version_id source_url final_url language region retrieved_at source_effective_date source_snapshot_retained authoring policy_digest cli_version scope semantic_evaluation"
+    if (not isinstance(provenance, dict) or not isinstance(provenance.get("schema_version"), str)
+            or provenance["schema_version"] not in {"1", "2"}):
+        raise ValueError("provenance format")
+    if provenance["schema_version"] == "1":
+        exact(provenance, provenance_fields + " response_sha256 extracted_text_sha256 extractor")
+    else:
+        exact(provenance, provenance_fields + " observation")
+        verify_browser_observation(provenance["observation"])
     exact(coverage, "schema_version source_id version_id policy_digest input_fields clauses case_clauses dependencies limitations")
+    if coverage["schema_version"] != "1":
+        raise ValueError("coverage format")
     for sidecar in [provenance, coverage]:
-        if (sidecar["schema_version"] != "1" or sidecar["source_id"] != sid
+        if (sidecar["source_id"] != sid
                 or sidecar["version_id"] != vid or sidecar["policy_digest"] != pd):
             raise ValueError("sidecar identity")
     if (provenance["source_url"] != sources[sid]["url"] or not public_url(provenance["final_url"])
@@ -203,7 +231,7 @@ def verify_version(entry, sources, root):
     exact(provenance["authoring"], "method tool model revision")
     if provenance["authoring"]["method"] != "authored-candidate":
         raise ValueError("unqualified generation assertion")
-    for key in ["language", "region", "extractor", "scope"]:
+    for key in ["language", "region", "scope"] + (["extractor"] if provenance["schema_version"] == "1" else []):
         if not bounded_text(provenance[key]):
             raise ValueError("provenance text identity")
     for key in ["tool", "model", "revision"]:
@@ -223,7 +251,7 @@ def verify_version(entry, sources, root):
             date.fromisoformat(effective)
     except ValueError:
         raise ValueError("provenance observation/effective date") from None
-    for key in ["response_sha256", "extracted_text_sha256"]:
+    for key in (["response_sha256", "extracted_text_sha256"] if provenance["schema_version"] == "1" else []):
         if not isinstance(provenance[key], str) or not re.fullmatch(r"[0-9a-f]{64}", provenance[key]):
             raise ValueError("source digest")
     if coverage["input_fields"] != ["text"] or not coverage["limitations"]:
