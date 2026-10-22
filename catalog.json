@@ -350,6 +350,20 @@
         "result": "readable"
       },
       "scope_notes": "Overview; landing page, region, business verification and linked policies are additional."
+    },
+    {
+      "id": "amazon-product-detail-rules",
+      "organization": "Amazon",
+      "title": "Product detail page rules (United States)",
+      "url": "https://sellercentral.amazon.com/help/hub/reference/external/G200390640",
+      "category": "commerce",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-22",
+        "result": "readable"
+      },
+      "scope_notes": "Detailed United States source, publicly rendered in English-US; separate from Conditions of Use. The authored candidate selects two listing-text checks only. Other rules, linked policies and account/product/history facts remain unresolved; browser observation does not qualify automated retrieval."
     }
   ],
   "versions": [
@@ -368,6 +382,23 @@
       },
       "cli_version": "0.7.0",
       "case_count": 26,
+      "semantic_evaluation": "not_evaluated"
+    },
+    {
+      "source_id": "amazon-product-detail-rules",
+      "version_id": "2026-10-22.1",
+      "policy_digest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "state": "candidate",
+      "files": {
+        "README.md": "sha256:de0be260584203ecee2c3cc55a321138c44f73749658c86d7f1dc17455f4ebca",
+        "cases.json": "sha256:56de2fe8ff9ac2e90ad482cd114ec97d846d94d27cda049585acebc80e086a9c",
+        "coverage.json": "sha256:7d35b3852fcd27271f3327cf3f6c02d6b1733beccbc4b9d3394188e307d599a2",
+        "fixtures.json": "sha256:7b623fe48a1ac930425360ec77accd7886b982bf67628d6b86bc97c334497b30",
+        "policy.json": "sha256:90250f75ce1ccb6411d3284c603a0cd28fc2a1573410ecf6c81505711e7a1b2e",
+        "provenance.json": "sha256:030bb2d323eca2876a0791ea7640b36f5bb670326241cf4794ba9ae5b91778e7"
+      },
+      "cli_version": "0.7.0",
+      "case_count": 24,
       "semantic_evaluation": "not_evaluated"
     }
   ]

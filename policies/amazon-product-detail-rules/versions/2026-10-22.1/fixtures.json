@@ -1,0 +1,538 @@
+{
+  "apiVersion": "fixture.antaeus.io/v0alpha1",
+  "kind": "FixtureSet",
+  "metadata": {
+    "name": "amazon-product-detail-rules",
+    "version": "2026-10-22.1"
+  },
+  "cases": [
+    {
+      "name": "product-description",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:8a517d52dbbddf44678207a624faf9b395fba93154ec9cda513442db9c3cc046",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "offsite-ordering",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:d9836a3cc8809028365116107a2761ada46c9ce15b8519f4f097834e78734ea5",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "numeric-specifications",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:f1c8f7f9091de032394f9c6340090cebddfc285c17508a6d95c1218e36e63b2e",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "model-number",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:889384677ae09f8e193022c75cbfd9a2ddc8b589d54b93d0288197ddd1ccd275",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "phone-stand",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:b98fd4854f1b61a5a67ab1735f5d2d9c3d49c0afa0d5e72fa736bdb3c8a83022",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "phone-contact",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:78fb5f746696bef38b15a4fcec39705c8de70f3047e918afd87f243aa531fc85",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "email-contact",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:a0fbc92b19a3349dd3f3d1e57593c0986e18bb222fb68fb18701b1d262b1c098",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mailing-address",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:898c005867a5193d1bffa2e159ce98de063abdb38306f8ca19128bdbc87afea2",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "website-url",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:bf872f1d556d23067671925ac11df2eda4fdc3cec37ee07bf167cd9a3b2be4ee",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "amazon-url",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:8aa60893005a2cde681f37587073f604575e0d44865fed18af0a7a6c71b06089",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outside-order-no-link",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:867686331caa79e6a055ce11339a77627e01b7648df1162c064d4d222d405bf5",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outside-payment-no-link",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:aea794eec8d329c1fb318185e9c50acfb2922b26f8f9873f038ad8eccb82fa46",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "quoted-phone-warning",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:f136337e4c5eaa1a14dac5718e3e462fe513fe595fcca8e937ff2385e333b85d",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "quoted-url-warning",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:e5acc3063a070582e86a92cb1dbeb4ae3041638d6b1c2e5bde2209919557c302",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vague-description",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:2931e9419e7540fb7a0512e564c9a0a3353e2a95fa99e4c065b931a677de346f",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "digital-service",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:296a1c7cba59fcc835f34c55bcd650125d338b2ab8239ad5611405dbb7ef2bb1",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "instruction-only",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:90775d3f36f14e3864b219321a8bf34cc1502c7621f703a9e514ae199c688181",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "deny-despite-instruction",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:07868170425a132c8815357a9d7518c76c5dff40aa0236ddcf610ef2a86cc97b",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "allow-despite-instruction",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:9d08c48a9f9457135ddaeeeee8c0e636a3d57b3c9e43d5dfd6a1a6ef85bbe65b",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "price-outside-selected-scope",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:8e7045b461951d4c1207c141af79ccb15211643b3773e1ac8cb81c24dbdd42c8",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "geographic-origin",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:5c87d2c8eca62fd298b86108ca5a713b399b7c942b794eaed64efb1d2fe36ba9",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "url-without-product",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:e19b8acb6ff11a74cf6073687e7bfa56f18ae4825f1391d7901bf2ffea361199",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "engine-provider-failure",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:68a03ca22d7d151af947d1a51615d0df50f66f79f6a52bafab5f8d65c6ba0068",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "failed",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "engine-deny-over-uncertainty",
+      "policyName": "amazon-listing-demo",
+      "policyDigest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+      "inputDigest": "sha256:af22313834fcc6684344ff4a699370b05c7d5cd954fcc8165b5ffe78ee0ba2c3",
+      "ruleResults": [
+        {
+          "ruleId": "listing-contact-or-ordering",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "product-description",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    }
+  ]
+}

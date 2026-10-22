@@ -3,13 +3,17 @@
 Public source URLs and reusable [Antaeus](https://github.com/antaeusio/antaeus)
 policy versions, with explicit provenance, coverage and review status.
 
-The [catalog](catalog.json) registers **25 official policy URLs** across commerce,
-payments, community platforms, AI and hosting. It also indexes one downloadable
-[eBay chance-listings text candidate](policies/ebay-chance-listings/versions/2026-10-22.1/README.md).
-Its six rules and 26 offline fixture cases are authored examples; semantic
-evaluation is not qualified, and no version is recommended or currently servable.
-Source registrations remain an import queue. A reachable overview page can still
-require linked documents or account facts.
+The [catalog](catalog.json) registers **26 official policy URLs** across commerce,
+payments, community platforms, AI and hosting. It indexes two downloadable
+authored candidates:
+
+- [eBay chance-listings text](policies/ebay-chance-listings/versions/2026-10-22.1/README.md): six rules, 26 offline fixture cases.
+- [Amazon product listing text](policies/amazon-product-detail-rules/versions/2026-10-22.1/README.md): two selected demo rules, 24 offline fixture cases.
+
+Semantic evaluation of these candidate suites is not qualified, and no version
+is recommended or currently servable. Source registrations remain an import
+queue. A reachable overview page can still require linked documents or account
+facts. Offline fixtures verify bindings and reduction; they do not classify text.
 
 | State | Meaning |
 | --- | --- |

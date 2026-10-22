@@ -1,0 +1,35 @@
+{
+  "schema_version": "2",
+  "source_id": "amazon-product-detail-rules",
+  "version_id": "2026-10-22.1",
+  "source_url": "https://sellercentral.amazon.com/help/hub/reference/external/G200390640",
+  "final_url": "https://sellercentral.amazon.com/help/hub/reference/external/G200390640",
+  "language": "en-US",
+  "region": "United States; no other marketplace or locale qualified",
+  "retrieved_at": "2026-10-22T19:13:48.247Z",
+  "source_effective_date": null,
+  "observation": {
+    "method": "browser-dom",
+    "selector": ".help-content",
+    "element_index": 0,
+    "matched_elements": 2,
+    "text_property": "innerText",
+    "normalization": "none",
+    "text_sha256": "2a2bce21188751c3936a09acec34361cfc0969bb4bb26bbc11094d10dcb562ae",
+    "text_bytes": 9644,
+    "http_response_sha256": null,
+    "response_linkage": "not-established",
+    "authentication": "public-no-sign-in"
+  },
+  "source_snapshot_retained": false,
+  "authoring": {
+    "method": "authored-candidate",
+    "tool": "Codex",
+    "model": "GPT-6 family; exact serving identifier unavailable",
+    "revision": "amazon-listing-demo-selected-text-v1"
+  },
+  "policy_digest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+  "cli_version": "0.7.0",
+  "scope": "English product listing text supplied in input.text; two selected demo checks only, with all other source requirements deferred",
+  "semantic_evaluation": "not_evaluated"
+}

@@ -1,0 +1,22 @@
+{
+  "apiVersion": "policy.antaeus.io/v0alpha1",
+  "kind": "Policy",
+  "metadata": {
+    "name": "amazon-listing-demo"
+  },
+  "spec": {
+    "defaultOutcome": "review",
+    "rules": [
+      {
+        "id": "listing-contact-or-ordering",
+        "when": "The submitted product listing includes a phone number, a physical mailing address, an email address, a website URL, or instructions to order or pay outside Amazon.",
+        "outcome": "deny"
+      },
+      {
+        "id": "product-description",
+        "when": "The submitted text clearly describes a physical product and its features or specifications, and contains no phone number, physical mailing address, email address, website URL, or instructions to order or pay outside Amazon.",
+        "outcome": "allow"
+      }
+    ]
+  }
+}
