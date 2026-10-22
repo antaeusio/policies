@@ -1,0 +1,170 @@
+{
+  "schema_version": "1",
+  "source_id": "ebay-chance-listings",
+  "version_id": "2026-10-22.1",
+  "policy_digest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+  "input_fields": [
+    "text"
+  ],
+  "clauses": [
+    {
+      "id": "C1",
+      "status": "converted",
+      "rule_ids": [
+        "chance-entry",
+        "described-mystery-offer",
+        "uniform-bonus-offer"
+      ],
+      "reason": "Chance offers; separate approval categories excluded."
+    },
+    {
+      "id": "C2",
+      "status": "converted",
+      "rule_ids": [
+        "unequal-bonuses",
+        "described-mystery-offer",
+        "uniform-bonus-offer"
+      ],
+      "reason": "Identical-bonus requirement; unresolved distribution prevents permission."
+    },
+    {
+      "id": "C3",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Break approval and delivery facts need application evidence; positive rules exclude breaks."
+    },
+    {
+      "id": "C4",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Repack seller approval needs application evidence; positive rules exclude repacks."
+    },
+    {
+      "id": "C5",
+      "status": "converted",
+      "rule_ids": [
+        "undisclosed-mystery-contents",
+        "described-mystery-offer",
+        "uniform-bonus-offer"
+      ],
+      "reason": "Contents disclosure; vague descriptions remain unresolved."
+    },
+    {
+      "id": "C6",
+      "status": "converted",
+      "rule_ids": [
+        "selective-valuable-item",
+        "described-mystery-offer",
+        "uniform-bonus-offer"
+      ],
+      "reason": "Valuable-item exception for every purchase is preserved."
+    },
+    {
+      "id": "C7",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Giveaway/sweepstakes approval and partnership are not verified; positive rules exclude them."
+    },
+    {
+      "id": "C8",
+      "status": "out_of_scope",
+      "rule_ids": [],
+      "reason": "Other agreements, law and rights remain outside a selected-rule text screen."
+    }
+  ],
+  "case_clauses": {
+    "raffle-ticket": [
+      "C1"
+    ],
+    "contest-prize": [
+      "C1"
+    ],
+    "random-winner-paraphrase": [
+      "C1"
+    ],
+    "mystery-general-contents": [
+      "C5",
+      "C6"
+    ],
+    "valuable-item-every-purchase": [
+      "C5",
+      "C6"
+    ],
+    "valuable-item-occasional": [
+      "C5",
+      "C6"
+    ],
+    "collector-value-no-price": [
+      "C5",
+      "C6"
+    ],
+    "missing-contents": [
+      "C5"
+    ],
+    "vague-contents": [
+      "C5",
+      "C6"
+    ],
+    "identical-bonus": [
+      "C2"
+    ],
+    "nonidentical-bonus": [
+      "C2"
+    ],
+    "unspecified-bonus": [
+      "C2",
+      "C5"
+    ],
+    "box-break-approval-claim": [
+      "C3"
+    ],
+    "pack-break-no-approval-fact": [
+      "C3"
+    ],
+    "repack-approval-claim": [
+      "C4"
+    ],
+    "giveaway-official-claim": [
+      "C7"
+    ],
+    "sweepstakes-no-approval-fact": [
+      "C7"
+    ],
+    "ordinary-fixed-item": [
+      "C8"
+    ],
+    "quoted-raffle-warning": [
+      "C1",
+      "C5",
+      "C6"
+    ],
+    "deny-despite-instruction": [
+      "C1"
+    ],
+    "allow-despite-instruction": [
+      "C5",
+      "C6"
+    ],
+    "mixed-mystery-and-raffle": [
+      "C1",
+      "C5"
+    ],
+    "contradictory-guarantee": [
+      "C6"
+    ],
+    "external-link-missing-description": [
+      "C5"
+    ]
+  },
+  "dependencies": [
+    {
+      "url": "https://www.ebay.com/help/policies/prohibited-restricted-items/products-eligibility-requirements-policy?id=5271",
+      "status": "unresolved"
+    }
+  ],
+  "limitations": [
+    "No account, image, linked-page or delivery verification.",
+    "An allowed result covers the described offer under selected clauses only.",
+    "Fixtures supply synthetic rule evidence and do not measure semantic classification."
+  ]
+}

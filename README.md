@@ -3,11 +3,13 @@
 Public source URLs and reusable [Antaeus](https://github.com/antaeusio/antaeus)
 policy versions, with explicit provenance, coverage and review status.
 
-The initial [catalog](catalog.json) registers **25 official policy URLs** across
-commerce, payments, community platforms, AI and hosting. These links are an
-import queue: **no executable policy versions are published yet**. Registered
-sources must not be used as if their policies have been generated or reviewed.
-A reachable overview page can still require linked documents or account facts.
+The [catalog](catalog.json) registers **25 official policy URLs** across commerce,
+payments, community platforms, AI and hosting. It also indexes one downloadable
+[eBay chance-listings text candidate](policies/ebay-chance-listings/versions/2026-10-22.1/README.md).
+Its six rules and 26 offline fixture cases are authored examples; semantic
+evaluation is not qualified, and no version is recommended or currently servable.
+Source registrations remain an import queue. A reachable overview page can still
+require linked documents or account facts.
 
 | State | Meaning |
 | --- | --- |
@@ -16,14 +18,15 @@ A reachable overview page can still require linked documents or account facts.
 | Reviewed version | A maintainer has approved the specific version and its test evidence. |
 | Withdrawn | Unavailable for new checks; historical copies may remain public. |
 
-## Planned version layout
+## Candidate version layout
 
 ```text
 policies/<source-id>/versions/<version-id>/
-  policy.yaml
+  policy.json
   provenance.json
   coverage.json
   cases.json
+  fixtures.json
   README.md
 ```
 
@@ -47,7 +50,16 @@ python3 scripts/verify.py
 ```
 
 Verification needs Python 3.14 and no credential, provider call or hosted account.
-Artifact reuse commands and regression cases will accompany each usable version.
+To also validate artifacts and execute their synthetic cases, install the
+[released v0.7.0 CLI](https://github.com/antaeusio/antaeus/releases/tag/v0.7.0) and run:
+
+```sh
+python3 scripts/verify.py --cli "$(command -v antaeus)"
+```
+
+[Catalog format and integrity rules](docs/catalog-format.md) describe candidate
+identities, immutable files and the distinction between fixtures and semantic
+evidence. CI verifies checksum-pinned CLI release bytes and unchanged history.
 
 ## Attribution and removal
 
