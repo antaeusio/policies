@@ -33,7 +33,7 @@ class CandidateIntegrity(unittest.TestCase):
         self.save()
 
     def test_candidate_is_consistent(self):
-        self.assertEqual(verify_repository(self.root), (28, 3))
+        self.assertEqual(verify_repository(self.root), (28, 4))
 
     def browser_provenance(self):
         # Synthetic metadata only: never a real source observation or new artifact.
@@ -53,7 +53,7 @@ class CandidateIntegrity(unittest.TestCase):
     def test_browser_observation_candidate_is_offline_only_and_consistent(self):
         value = self.browser_provenance()
         self.rewrite("provenance.json", lambda p: (p.clear(), p.update(value)))
-        self.assertEqual(verify_repository(self.root), (28, 3))
+        self.assertEqual(verify_repository(self.root), (28, 4))
         self.assertEqual(self.entry["state"], "candidate")
         self.assertEqual(self.entry["semantic_evaluation"], "not_evaluated")
 

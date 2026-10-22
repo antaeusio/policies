@@ -1,0 +1,255 @@
+{
+  "schema_version": "1",
+  "source_id": "x-authenticity",
+  "version_id": "2026-10-23.1",
+  "policy_digest": "sha256:ff6cc375db771fdc3f13b930069c205290317248553daecac141b29fa7323774",
+  "input_fields": [
+    "text"
+  ],
+  "clauses": [
+    {
+      "id": "X1",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Unauthorized automation: Needs Developer Policy and application/account evidence."
+    },
+    {
+      "id": "X2",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Fake personas: Needs manufactured-identity/deception facts."
+    },
+    {
+      "id": "X3",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Impersonation and PCF exception: All label/avatar/name/bio conditions matter; text claiming parody is insufficient."
+    },
+    {
+      "id": "X4",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Account compromise: Needs actual account authorization and security evidence; no credentials are requested. Generic access requests and delegated-work authorization remain context questions, not inferred trades."
+    },
+    {
+      "id": "X5",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Multiple accounts and authentic coordination: Preserve distinct-purpose, language-localization and authentic-expression exceptions; account behavior/limits are not verified."
+    },
+    {
+      "id": "X6",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Ban evasion: Needs enforcement/account-history facts."
+    },
+    {
+      "id": "X7",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Content spam: Bulk/repetitive/irrelevant posts, edits and hashtag misuse need original conversation/history context."
+    },
+    {
+      "id": "X8",
+      "status": "converted",
+      "rule_ids": [
+        "account-access-trade"
+      ],
+      "reason": "Account/username access trading: Assess explicit buying/selling/trading offers; do not conflate authorized Teams/OAuth delegation with trading. Only described account/username/access transactions for exchanged value are selected; other access/authority questions remain deferred under X4, and product/affiliation transactions under X18."
+    },
+    {
+      "id": "X9",
+      "status": "converted",
+      "rule_ids": [
+        "engagement-exchange"
+      ],
+      "reason": "Engagement exchange and metric compensation: Assess coordination to exchange engagement or compensate artificial metric inflation; no blanket ban on genuine engagement requests. Follow-churn, indiscriminate following, aggressive automated engagement/list activity and follower duplication need behavioral evidence and are not converted here."
+    },
+    {
+      "id": "X10",
+      "status": "converted",
+      "rule_ids": [
+        "transaction-service-promotion"
+      ],
+      "reason": "Promoting third-party transaction services: Selected only for services performing the specific prohibited account/engagement transactions; follow churn and other unobserved activity remain deferred."
+    },
+    {
+      "id": "X11",
+      "status": "converted",
+      "rule_ids": [
+        "reporting-abuse-plan"
+      ],
+      "reason": "Reporting-feature abuse: Assess explicit false/duplicate mass-report plans and malicious harassment coordination; no assumption that every report is abusive."
+    },
+    {
+      "id": "X12",
+      "status": "converted",
+      "rule_ids": [
+        "reporting-abuse-plan",
+        "manual-good-faith-report",
+        "good-faith-support-encouragement"
+      ],
+      "reason": "Good-faith reporting exceptions: Positive scope describes manual good-faith reports of believed violations or good-faith customer-support encouragement; prior-consent automation needs external NGO/LEO authorization and identity facts."
+    },
+    {
+      "id": "X13",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Scam tactics: Trust, fraud and actual deceptive intent/facts require separate scope; no ordinary refund dispute is labeled a scam."
+    },
+    {
+      "id": "X14",
+      "status": "out_of_scope",
+      "rule_ids": [],
+      "reason": "Financial dispute non-intervention: No finding about legal rights, refunds or product quality follows from the selected text screen."
+    },
+    {
+      "id": "X15",
+      "status": "not_convertible",
+      "rule_ids": [],
+      "reason": "Synthetic/manipulated or out-of-context media: Needs media, context and deception/harm evidence; preserve non-deceptive sharing exception."
+    },
+    {
+      "id": "X16",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Malicious URLs: No linked-page retrieval or malware/phishing classification from a bare URL."
+    },
+    {
+      "id": "X17",
+      "status": "out_of_scope",
+      "rule_ids": [],
+      "reason": "Enforcement, reporting and appeals process: No account restriction, prior violation or appeal outcome is assigned."
+    },
+    {
+      "id": "X18",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Other X product and affiliation transactions: The account-transaction source bullet also mentions X products and pay-for-affiliation schemes. These are not converted into a blanket product-purchase ban; actual product, affiliation, transaction and authorization context needs separate scope."
+    }
+  ],
+  "case_clauses": {
+    "account-sale": [
+      "X8"
+    ],
+    "username-purchase": [
+      "X8"
+    ],
+    "temporary-access-barter": [
+      "X8"
+    ],
+    "like-exchange": [
+      "X9"
+    ],
+    "poll-vote-exchange": [
+      "X9"
+    ],
+    "paid-reposts": [
+      "X9"
+    ],
+    "third-party-views": [
+      "X9",
+      "X10"
+    ],
+    "coordinated-false-report": [
+      "X11"
+    ],
+    "report-harassment": [
+      "X11"
+    ],
+    "duplicate-mass-reports": [
+      "X11"
+    ],
+    "manual-good-faith-report": [
+      "X12"
+    ],
+    "support-report-encouragement": [
+      "X12"
+    ],
+    "ngo-automation-claim": [
+      "X1",
+      "X12"
+    ],
+    "authentic-cause-coordination": [
+      "X5"
+    ],
+    "distinct-accounts": [
+      "X5"
+    ],
+    "localized-crosspost": [
+      "X5"
+    ],
+    "parody-label-claim": [
+      "X3"
+    ],
+    "automation-compliance-claim": [
+      "X1"
+    ],
+    "refund-dispute": [
+      "X13",
+      "X14"
+    ],
+    "bare-url": [
+      "X16"
+    ],
+    "quoted-report-warning": [
+      "X11"
+    ],
+    "deny-despite-instruction": [
+      "X9"
+    ],
+    "allow-despite-instruction": [
+      "X12"
+    ],
+    "ambiguous-report-request": [
+      "X11",
+      "X12"
+    ],
+    "team-access-delegation": [
+      "X4",
+      "X8"
+    ],
+    "good-faith-label-on-false-reports": [
+      "X11",
+      "X12"
+    ]
+  },
+  "dependencies": [
+    {
+      "url": "https://developer.x.com/en/developer-terms/agreement-and-policy",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://help.x.com/en/rules-and-policies/profile-labels",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://help.x.com/en/safety-and-security/account-security-tips",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://help.x.com/en/safety-and-security/phishing-spam-and-malware-links.html",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://help.x.com/en/forms/account-access/appeals.html",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://help.x.com/en/rules-and-policies/x-rules",
+      "status": "unresolved"
+    }
+  ],
+  "limitations": [
+    "Selected English X proposal-text scope only; not platform endorsement, full-source compliance, verified account activity, maintainer semantic approval or hosted eligibility.",
+    "Authored candidate and synthetic supplied rule evidence; no qualified semantic case run, automatic retrieval or freshness certification.",
+    "No actual account identity, authority, permission, history, report truth, automation, media or destination is verified.",
+    "Teams/OAuth collaboration without a described prohibited transaction is not account trading; unknown authorization stays a context question.",
+    "Products/pay-for-affiliation transactions are a separately deferred group, not a blanket product-purchase prohibition.",
+    "Manual good-faith reporting and good-faith customer-support encouragement are narrow described positives, not proof that a report is true or all X rules are met.",
+    "NGO/LEO automated reporting requires actual prior consent and organizational identity; an unverified label or permission claim grants no positive outcome.",
+    "Fake personas, PCF conditions, multi-account/localization/authentic-coordination exceptions, technical limits, ban evasion, content/activity spam, other engagement behavior, scams, financial disputes, media and URLs remain deferred.",
+    "Warnings or quotations that are not themselves proposals are not abusive plans; checker instructions remain data.",
+    "New cases have no semantic-study admission/reservation or extra financial allowance."
+  ]
+}
