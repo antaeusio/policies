@@ -58,6 +58,20 @@
       "scope_notes": "Index page: category restrictions live in linked policies; this page alone is incomplete."
     },
     {
+      "id": "ebay-chance-listings",
+      "organization": "eBay",
+      "title": "Chance listings policy",
+      "url": "https://www.ebay.com/help/policies/prohibited-restricted-items/chance-listings-policy?id=4311",
+      "category": "commerce",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-22",
+        "result": "readable"
+      },
+      "scope_notes": "English ebay.com page. Chance offers, bonuses and mystery-box disclosures; breaks, repacks and giveaways depend on approval or related requirements. Research retrieval only; no executable policy or overall-sale approval."
+    },
+    {
       "id": "shopify-aup",
       "organization": "Shopify",
       "title": "Acceptable Use Policy",
