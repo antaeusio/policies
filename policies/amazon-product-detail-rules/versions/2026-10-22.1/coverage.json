@@ -1,0 +1,269 @@
+{
+  "schema_version": "1",
+  "source_id": "amazon-product-detail-rules",
+  "version_id": "2026-10-22.1",
+  "policy_digest": "sha256:a638ac46976967809b263c17c0b6baef8df9128bf81a13f7043cf03d7afcab3e",
+  "input_fields": [
+    "text"
+  ],
+  "clauses": [
+    {
+      "id": "A1",
+      "status": "converted",
+      "rule_ids": [
+        "listing-contact-or-ordering",
+        "product-description"
+      ],
+      "reason": "Writing listings: selected contact-number, mailing-address, email and website-URL exclusion for supplied listing text; images are not inspected."
+    },
+    {
+      "id": "A2",
+      "status": "converted",
+      "rule_ids": [
+        "listing-contact-or-ordering",
+        "product-description"
+      ],
+      "reason": "Writing listings: external ordering links and advertising inform the demo adaptation. It conservatively excludes all instructions to order or pay outside Amazon, even without a URL; this is an interpretation, not a verbatim source rule."
+    },
+    {
+      "id": "A3",
+      "status": "converted",
+      "rule_ids": [
+        "product-description"
+      ],
+      "reason": "Writing listings: selected clear-description requirement only. Restricting the positive rule to physical products with features/specifications is demo scope, not a source ban on other product types; truth and completeness are not established."
+    },
+    {
+      "id": "A4",
+      "status": "out_of_scope",
+      "rule_ids": [],
+      "reason": "Writing listings: style guides, category templates, code restrictions and the special line-break exception are omitted."
+    },
+    {
+      "id": "A5",
+      "status": "out_of_scope",
+      "rule_ids": [],
+      "reason": "Writing listings: offensive material, availability/price/condition, alternative shipping offers, spoilers, reviews/testimonials and review requests, promotions, time-sensitive details, generic-brand content and restricted phrases are omitted."
+    },
+    {
+      "id": "A6",
+      "status": "out_of_scope",
+      "rule_ids": [],
+      "reason": "Writing listings: title/highlight length, media exceptions, capitalization, emojis and symbols require separate field-aware checks."
+    },
+    {
+      "id": "A7",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Writing listings: accurate category and category restrictions require product/category evidence and linked rules."
+    },
+    {
+      "id": "A8",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Writing listings: trustworthy information and permissible product claims need truth/evidence and linked-policy review; a clear description is insufficient."
+    },
+    {
+      "id": "A9",
+      "status": "not_convertible",
+      "rule_ids": [],
+      "reason": "Writing listings: image standards and category image guidance cannot be checked from input.text."
+    },
+    {
+      "id": "A10",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Writing listings: essential additional items require product-function and completeness facts."
+    },
+    {
+      "id": "A11",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Adding detail pages: third-party intellectual-property rights require rights evidence and the linked policy."
+    },
+    {
+      "id": "A12",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Adding/editing detail pages: true identifiers, authorized GS1 GTINs and GTIN exemptions require external evidence."
+    },
+    {
+      "id": "A13",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "General/adding/editing detail pages: duplicate pages, valid variations and separate ASINs for new versions require catalog/history facts and ASIN rules."
+    },
+    {
+      "id": "A14",
+      "status": "out_of_scope",
+      "rule_ids": [],
+      "reason": "Adding detail pages: cross-merchandising and media bundle/single-product identifier restrictions are not selected."
+    },
+    {
+      "id": "A15",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Editing detail pages: original-product edits, repeated evasion, rebranding, generic/branded ASIN use and permitted minor corrections require history, identity and linked rules."
+    },
+    {
+      "id": "A16",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Brand Registry guidance: roles, competing contributions, administrator authority and support/abuse processes require account evidence; the text screen does not determine them."
+    }
+  ],
+  "case_clauses": {
+    "product-description": [
+      "A3"
+    ],
+    "offsite-ordering": [
+      "A1",
+      "A2"
+    ],
+    "numeric-specifications": [
+      "A1",
+      "A3"
+    ],
+    "model-number": [
+      "A1",
+      "A3"
+    ],
+    "phone-stand": [
+      "A1",
+      "A3"
+    ],
+    "phone-contact": [
+      "A1"
+    ],
+    "email-contact": [
+      "A1"
+    ],
+    "mailing-address": [
+      "A1"
+    ],
+    "website-url": [
+      "A1"
+    ],
+    "amazon-url": [
+      "A1"
+    ],
+    "outside-order-no-link": [
+      "A2"
+    ],
+    "outside-payment-no-link": [
+      "A2"
+    ],
+    "quoted-phone-warning": [
+      "A1"
+    ],
+    "quoted-url-warning": [
+      "A1"
+    ],
+    "vague-description": [
+      "A3"
+    ],
+    "digital-service": [
+      "A3"
+    ],
+    "instruction-only": [
+      "A3"
+    ],
+    "deny-despite-instruction": [
+      "A1"
+    ],
+    "allow-despite-instruction": [
+      "A3"
+    ],
+    "price-outside-selected-scope": [
+      "A3",
+      "A5"
+    ],
+    "geographic-origin": [
+      "A1",
+      "A3"
+    ],
+    "url-without-product": [
+      "A1"
+    ]
+  },
+  "dependencies": [
+    {
+      "url": "https://sellercentral.amazon.com/help/hub/reference/external/G200301050",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/G201844590",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://images-na.ssl-images-amazon.com/images/G/01/Lite_Inventory_Templates/Selling_on_Amazon_Quick_Start_Style_Guide.pdf",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/G1641",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/help/hub/reference/external/GMF8CVX6S6CF8MM2",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/help/hub/reference/external/GYTR6SYGFA5E3EQC",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/GYTR6SYGFA5E3EQC",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/200956770",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/1661",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/201844590",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/help/hub/reference/external/G202024200",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/G201361070",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/G2N3GKE5SGSHWYRZ",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/gp/help/external/G200335450",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://brandregistry.amazon.com/brg/selling-benefits?view=overview",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://sellercentral.amazon.com/abuse-submission/index.html",
+      "status": "unresolved"
+    }
+  ],
+  "limitations": [
+    "Two selected English listing-text checks only, not full Amazon policy compliance or an official/endorsed policy.",
+    "Positive permission is deliberately limited to physical product descriptions; default review does not imply a source prohibition.",
+    "A2 conservatively adapts outside ordering/payment instructions, including instructions without links.",
+    "Quoted contact details and URLs remain literal selected-rule violations; no quotation or same-platform URL exception is invented.",
+    "An allow can coexist with an omitted source violation, including price details; see price-outside-selected-scope.",
+    "No image, account, product truth, category, catalog-history, ownership, linked-page or delivery verification.",
+    "Browser DOM observation has no linked HTTP response and does not qualify automated source retrieval, freshness or service eligibility.",
+    "Fixture evidence is synthetic and establishes binding/outcome reduction only, not semantic classification; no new live semantic evaluation is qualified."
+  ]
+}
