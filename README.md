@@ -3,7 +3,7 @@
 Public source URLs and reusable [Antaeus](https://github.com/antaeusio/antaeus)
 policy versions, with explicit provenance, coverage and review status.
 
-The [catalog](catalog.json) registers **26 official policy URLs** across commerce,
+The [catalog](catalog.json) registers **28 official policy URLs** across commerce,
 payments, community platforms, AI and hosting. It indexes two downloadable
 authored candidates:
 
