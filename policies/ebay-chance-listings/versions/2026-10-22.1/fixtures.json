@@ -1,0 +1,1310 @@
+{
+  "apiVersion": "fixture.antaeus.io/v0alpha1",
+  "kind": "FixtureSet",
+  "metadata": {
+    "name": "ebay-chance-listings",
+    "version": "2026-10-22.1"
+  },
+  "cases": [
+    {
+      "name": "raffle-ticket",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:8d04823a9cf3e6bae235a150be18a1277cd67ea6fffcfb90547b6e4ccece3346",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contest-prize",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:6e9bf895634bac0ffdc5d4bc3ec04920990afe0286349f0240784916eed7df84",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "random-winner-paraphrase",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:6f6011cfaa8f27e6a6d59e3e51adb2cd9c36aa921fcd4254ff3501feb8d934a9",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mystery-general-contents",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:00397f7db11c4c65650d137dcaad3435b850cfb33c63be4dcb0b91e6a29e0d68",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "valuable-item-every-purchase",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:aac42d553e2cb2504d296926e2bc9a97c879f0368a17124d0fb54f5be13690d5",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "valuable-item-occasional",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:ffda07d9b3589f3d076d05124293bf25b7142aae4854b502b5d35b1199d73a02",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "collector-value-no-price",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:b197ab8822d10d10f5281f1f6d2b4ae336a47f1aca769c4c918a357f77f76079",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "missing-contents",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:e3d631d3886a61d03666068e08537e34d5f9e31a3a18d79b11c97c836e2ce6d8",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vague-contents",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:2aa74f2898a6af1cc7171342281367066a43da058f13bc208803d322f026cda0",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "identical-bonus",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:c0aa8edf7e42d74f27f75d0ab4db9f4561ab873a8a7a308b755e2a037d084eec",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nonidentical-bonus",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:c6e298d4b503f390fb00bda06ac8a0c9b88b29181c85a7ff533ffdf71d98f4d2",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unspecified-bonus",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:152f9d53a54d1fff9c6160eb4d8c46145aece8dd8f0b9393fb99e4508da09297",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "box-break-approval-claim",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:45965149e76c57d2da0c64cd3e28c349aaa8c295083c931e2e4827415677de1b",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pack-break-no-approval-fact",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:334ab702c95d60426d8e160db913cbc9ffe3ccce15c682b5d5a16ba9a0a761f2",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "repack-approval-claim",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:7d2e1a8146798fb60e62230aaffc1dcae69ddc887a66099b124f8c538bc3acd1",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "giveaway-official-claim",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:a5ac7f0b6599bc1e0d05172b992c3c83bcfdf830b46e7cafa879fd375c5aa686",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sweepstakes-no-approval-fact",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:c3535f74eaed0de2bc207dd8aca8fabffe9c4ff76f1d8221fc9fb0fe5d745c94",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ordinary-fixed-item",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:c7483d9ced22b589367cade791db67a67362f32f39cd6a640f50c6e04f1dc598",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "quoted-raffle-warning",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:9084ad75aeb7be535b92a4651d06c3df4c6b7e31d5fc65903aa455abaf0c4174",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "deny-despite-instruction",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:42af2f130a8139cf88a1058fc147b2322c500a3cd4a6a8a9fa9ee2b15ce08d04",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "allow-despite-instruction",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:088e2feb4476dbc02f9e720bd09d55b7afc5e39996165d572025591588b22256",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mixed-mystery-and-raffle",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:6a992a60308709add7064c016c4a866402f4b6b77c3b4be8932142ada830b325",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contradictory-guarantee",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:1d63fe4c344746d2ebcc49ddc47986a08540167cafbe6c8a0fe4f250709a66c6",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "external-link-missing-description",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:058df8c2bda3134abab34503470fb4908cd542a860b4975ed973069f13392ca9",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "engine-provider-failure",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:68a03ca22d7d151af947d1a51615d0df50f66f79f6a52bafab5f8d65c6ba0068",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "failed",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "engine-deny-over-uncertainty",
+      "policyName": "ebay-chance-listings-text",
+      "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "inputDigest": "sha256:af22313834fcc6684344ff4a699370b05c7d5cd954fcc8165b5ffe78ee0ba2c3",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "fixture.exact_result"
+          ]
+        }
+      ]
+    }
+  ]
+}

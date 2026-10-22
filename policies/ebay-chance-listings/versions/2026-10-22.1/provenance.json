@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "source_id": "ebay-chance-listings",
+  "version_id": "2026-10-22.1",
+  "source_url": "https://www.ebay.com/help/policies/prohibited-restricted-items/chance-listings-policy?id=4311",
+  "final_url": "https://www.ebay.com/help/policies/prohibited-restricted-items/chance-listings-policy?id=4311",
+  "language": "en",
+  "region": "ebay.com; applicability outside the observed English page unverified",
+  "retrieved_at": "2026-10-22T14:36:47.199500+00:00",
+  "source_effective_date": null,
+  "response_sha256": "c9a17e12d4341ef64c9c05fa22e6bd5d14b269fcb3f40afd1fa20845542b3066",
+  "extracted_text_sha256": "6957adcbe28a38daa06a40abecb61bc64b8bc0fbf25804b86ce023a94dd4c7dc",
+  "extractor": "research-htmlparser-text-v1",
+  "source_snapshot_retained": false,
+  "authoring": {
+    "method": "authored-candidate",
+    "tool": "Codex",
+    "model": "GPT-6 family; exact runtime model identifier not exposed",
+    "revision": "ebay-chance-text-v1"
+  },
+  "policy_digest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+  "cli_version": "0.7.0",
+  "scope": "Complete English listing text only; described offers, no external verification",
+  "semantic_evaluation": "not_evaluated"
+}

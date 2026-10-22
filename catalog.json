@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1",
+  "schemaVersion": "2",
   "sources": [
     {
       "id": "amazon-conditions",
@@ -350,6 +350,25 @@
         "result": "readable"
       },
       "scope_notes": "Overview; landing page, region, business verification and linked policies are additional."
+    }
+  ],
+  "versions": [
+    {
+      "source_id": "ebay-chance-listings",
+      "version_id": "2026-10-22.1",
+      "policy_digest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+      "state": "candidate",
+      "files": {
+        "README.md": "sha256:5b4e30137302cabc168b2aaa807a66777fd5555205622ed8cbee8e4c23f815cb",
+        "cases.json": "sha256:739db152978a8dc2bac9d93a50d43c1264f7614bd0e0bc73aa6a99b96236ea3a",
+        "coverage.json": "sha256:c07589cce0ba9ade079012d084804db557dea6c2ce3c185cb088c56a3990e136",
+        "fixtures.json": "sha256:4822692f43e4ee494fbcb3e110e1b0b56b8704399b7937ddd9aee643a5987cb1",
+        "policy.json": "sha256:ab0f6c32b60ae7e06c2ac19346a1bbc6f52a9dfd894f1ce7e30bba669385cdcb",
+        "provenance.json": "sha256:4b3b9647e59eb080b946c179b655d146adf482015b72a03beca964c9d234ead7"
+      },
+      "cli_version": "0.7.0",
+      "case_count": 26,
+      "semantic_evaluation": "not_evaluated"
     }
   ]
 }
