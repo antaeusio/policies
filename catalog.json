@@ -206,10 +206,10 @@
       "status": "registered",
       "current_version": null,
       "discovery": {
-        "date": "2026-10-10",
-        "result": "unavailable"
+        "date": "2026-10-22",
+        "result": "readable"
       },
-      "scope_notes": "Discovery could not retrieve this page; no policy extracted."
+      "scope_notes": "Public browser observation in English (US); overview states applicability to Facebook, Instagram, Messenger and Threads. Detailed policy pages, context-dependent exceptions and account facts are additional. Browser readability does not qualify automated retrieval or an executable policy."
     },
     {
       "id": "x-rules",
@@ -364,6 +364,34 @@
         "result": "readable"
       },
       "scope_notes": "Detailed United States source, publicly rendered in English-US; separate from Conditions of Use. The authored candidate selects two listing-text checks only. Other rules, linked policies and account/product/history facts remain unresolved; browser observation does not qualify automated retrieval."
+    },
+    {
+      "id": "meta-spam",
+      "organization": "Meta",
+      "title": "Spam (Community Standards)",
+      "url": "https://transparency.meta.com/policies/community-standards/spam/",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-22",
+        "result": "readable"
+      },
+      "scope_notes": "Detailed source publicly rendered in English (US). Engagement/asset trading and access gates have distinct exceptions for unpaid cross-promotion and interest-based moderation handovers. Branded content, linked-page behavior and account activity require more context. Source registration only; no executable version."
+    },
+    {
+      "id": "x-authenticity",
+      "organization": "X",
+      "title": "Authenticity",
+      "url": "https://help.x.com/en/rules-and-policies/authenticity",
+      "category": "community",
+      "status": "registered",
+      "current_version": null,
+      "discovery": {
+        "date": "2026-10-22",
+        "result": "readable"
+      },
+      "scope_notes": "Detailed English source publicly rendered; final observed URL has no .html suffix. Covers account, behavior and content authenticity, with explicit exceptions. Account/profile history, automation authorization, reporting intent and media/link evidence cannot be established from a single text. Source registration only; no executable version."
     }
   ],
   "versions": [
