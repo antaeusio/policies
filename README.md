@@ -4,11 +4,12 @@ Public source URLs and reusable [Antaeus](https://github.com/antaeusio/antaeus)
 policy versions, with explicit provenance, coverage and review status.
 
 The [catalog](catalog.json) registers **28 official policy URLs** across commerce,
-payments, community platforms, AI and hosting. It indexes two downloadable
+payments, community platforms, AI and hosting. It indexes three downloadable
 authored candidates:
 
 - [eBay chance-listings text](policies/ebay-chance-listings/versions/2026-10-22.1/README.md): six rules, 26 offline fixture cases.
 - [Amazon product listing text](policies/amazon-product-detail-rules/versions/2026-10-22.1/README.md): two selected demo rules, 24 offline fixture cases.
+- [Facebook selected spam text](policies/meta-spam/versions/2026-10-22.1/README.md): six selected rules, 28 offline fixture cases.
 
 Semantic evaluation of these candidate suites is not qualified, and no version
 is recommended or currently servable. Source registrations remain an import

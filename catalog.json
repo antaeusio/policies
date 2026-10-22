@@ -377,7 +377,7 @@
         "date": "2026-10-22",
         "result": "readable"
       },
-      "scope_notes": "Detailed source publicly rendered in English (US). Engagement/asset trading and access gates have distinct exceptions for unpaid cross-promotion and interest-based moderation handovers. Branded content, linked-page behavior and account activity require more context. Source registration only; no executable version."
+      "scope_notes": "Detailed source publicly rendered in English (US). Engagement/asset trading and access gates have distinct exceptions for unpaid cross-promotion and interest-based moderation handovers. Branded content, linked-page behavior and account activity require more context. Authored selected-text candidate only; no semantic qualification or currently servable version."
     },
     {
       "id": "x-authenticity",
@@ -427,6 +427,23 @@
       },
       "cli_version": "0.7.0",
       "case_count": 24,
+      "semantic_evaluation": "not_evaluated"
+    },
+    {
+      "source_id": "meta-spam",
+      "version_id": "2026-10-22.1",
+      "policy_digest": "sha256:512717b449ea7909ac22b88d957869be825bd1822fea6e11051fda8550af99ee",
+      "state": "candidate",
+      "files": {
+        "README.md": "sha256:4815f1cdf5eadecf92aa1da8b8ac87e9a7d2b0d0cde71b8a7821be5762e235ea",
+        "cases.json": "sha256:13bca30dfc62641c38140571f1b1d5bd90bd5114bf3c6faaf9099b1d71cd128d",
+        "coverage.json": "sha256:a898afced21158a28d826c351507136a1ace6d4233fe35bbc685642dfc4a5e36",
+        "fixtures.json": "sha256:7e8a088efb327f451cbe7e3a143ad419a4500bd3c82d69095553a2e9b367c58c",
+        "policy.json": "sha256:50deaf79cd8c56173c895a523d55b377de5c89d42ba0f16917c4e95805dfcde3",
+        "provenance.json": "sha256:8b18449e55bdc98189c170887915175095b5af780e0fee0ea0d9dab2afe6f036"
+      },
+      "cli_version": "0.7.0",
+      "case_count": 28,
       "semantic_evaluation": "not_evaluated"
     }
   ]

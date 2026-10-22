@@ -1,0 +1,35 @@
+{
+  "schema_version": "2",
+  "source_id": "meta-spam",
+  "version_id": "2026-10-22.1",
+  "source_url": "https://transparency.meta.com/policies/community-standards/spam/",
+  "final_url": "https://transparency.meta.com/policies/community-standards/spam/",
+  "language": "en-US",
+  "region": "Selected Facebook text scope; source describes worldwide applicability; no other product or locale qualified",
+  "retrieved_at": "2026-10-22T20:00:12.412Z",
+  "source_effective_date": null,
+  "observation": {
+    "method": "browser-dom",
+    "selector": "[role=\"tabpanel\"]",
+    "element_index": 0,
+    "matched_elements": 1,
+    "text_property": "innerText",
+    "normalization": "none",
+    "text_sha256": "a213b6cfdae0f36d5f65e8d4e4c11f3aa9c6251c768cb1429362f282a0f3844a",
+    "text_bytes": 4590,
+    "http_response_sha256": null,
+    "response_linkage": "not-established",
+    "authentication": "public-no-sign-in"
+  },
+  "source_snapshot_retained": false,
+  "authoring": {
+    "method": "authored-candidate",
+    "tool": "Codex",
+    "model": "GPT-6 family; exact serving identifier unavailable",
+    "revision": "facebook-selected-spam-text-v1"
+  },
+  "policy_digest": "sha256:512717b449ea7909ac22b88d957869be825bd1822fea6e11051fda8550af99ee",
+  "cli_version": "0.7.0",
+  "scope": "English text supplied in input.text; described asset/privilege trades, engagement exchanges and promised-content gates, with conditional unpaid cross-promotion and interest handover exceptions; all other source requirements deferred",
+  "semantic_evaluation": "not_evaluated"
+}

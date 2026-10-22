@@ -1,0 +1,257 @@
+{
+  "schema_version": "1",
+  "source_id": "meta-spam",
+  "version_id": "2026-10-22.1",
+  "policy_digest": "sha256:512717b449ea7909ac22b88d957869be825bd1822fea6e11051fda8550af99ee",
+  "input_fields": [
+    "text"
+  ],
+  "clauses": [
+    {
+      "id": "M1",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "High-frequency or repetitive/inauthentic activity: Needs account and distribution telemetry; no arbitrary numeric threshold is invented."
+    },
+    {
+      "id": "M2",
+      "status": "converted",
+      "rule_ids": [
+        "platform-asset-trade"
+      ],
+      "reason": "Trading platform assets: Assess described offers to buy, sell or barter accounts/groups/pages; ordinary physical goods are distinct."
+    },
+    {
+      "id": "M3",
+      "status": "converted",
+      "rule_ids": [
+        "platform-privilege-trade",
+        "interest-based-handover"
+      ],
+      "reason": "Trading site privileges: Assess exchanges of admin/moderator/posting privileges; preserve interest-based responsibility handovers."
+    },
+    {
+      "id": "M4",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Monetary content exchange and branded exception: Defer the complete transaction category and branded-content exception until linked policy/context is reviewed; do not ban all paid creator content."
+    },
+    {
+      "id": "M5",
+      "status": "converted",
+      "rule_ids": [
+        "engagement-trade",
+        "unpaid-cross-promotion"
+      ],
+      "reason": "Engagement exchange: Select money/monetary-value rewards and metric trading such as follow-for-follow, subject to M15 unpaid cross-promotion. Reciprocal promotional sharing is not automatically prohibited engagement trading; unresolved overlap or exception conditions require review."
+    },
+    {
+      "id": "M6",
+      "status": "converted",
+      "rule_ids": [
+        "promised-content-engagement-gate"
+      ],
+      "reason": "Claimed or required engagement before promised content: The source excludes claiming a user must engage before accessing promised content, even without proving a working technical gate."
+    },
+    {
+      "id": "M7",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Cloaking: Requires comparing what integrity systems and users receive."
+    },
+    {
+      "id": "M8",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Misleading destinations: Requires promised-versus-delivered destination evidence."
+    },
+    {
+      "id": "M9",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Deceptive redirects: Requires navigation/domain/action evidence."
+    },
+    {
+      "id": "M10",
+      "status": "converted",
+      "rule_ids": [
+        "promised-content-engagement-gate"
+      ],
+      "reason": "Like/share-gating: Same selected access-gate condition as M6; no duplicate interpretation."
+    },
+    {
+      "id": "M11",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Deceptive platform functionality: Requires actual interface/functionality evidence."
+    },
+    {
+      "id": "M12",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Deceptive landing-page functionality: Requires pop-up/clickjacking/trapping behavior evidence."
+    },
+    {
+      "id": "M13",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Landing-page/domain impersonation: Requires external identity and destination evidence."
+    },
+    {
+      "id": "M14",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Other similar deceptive link uses: Open-ended category is not converted into a catch-all text deny."
+    },
+    {
+      "id": "M15",
+      "status": "converted",
+      "rule_ids": [
+        "engagement-trade",
+        "unpaid-cross-promotion"
+      ],
+      "reason": "Unpaid cross-promotion exception: Preserve unpaid cross-promotion, including reciprocal sharing of promotional content, when described as not triggered by third-party payment and without another selected violation. Distinguish promotional sharing from pure metric trading; unresolved purpose, payment or overlapping engagement-exchange conditions require review rather than deny."
+    },
+    {
+      "id": "M16",
+      "status": "converted",
+      "rule_ids": [
+        "platform-privilege-trade",
+        "interest-based-handover"
+      ],
+      "reason": "Interest-based moderation handover exception: Positive scope requires transfer based on interest rather than exchanged value; it does not verify actual authority."
+    },
+    {
+      "id": "M17",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Clearly identified branded content exception: A self-applied label does not establish linked-policy qualification; default review."
+    },
+    {
+      "id": "M18",
+      "status": "needs_context",
+      "rule_ids": [],
+      "reason": "Overview context/newsworthiness exceptions: Meta weighing/approval and credible external exception context cannot be inferred from a self-asserted approval claim."
+    }
+  ],
+  "case_clauses": {
+    "page-for-sale": [
+      "M2"
+    ],
+    "paid-admin-role": [
+      "M3"
+    ],
+    "asset-barter": [
+      "M2"
+    ],
+    "paid-likes": [
+      "M5"
+    ],
+    "follow-trade": [
+      "M5"
+    ],
+    "cash-giveaway-entry": [
+      "M5"
+    ],
+    "product-reward": [
+      "M5"
+    ],
+    "claimed-access-gate": [
+      "M6",
+      "M10"
+    ],
+    "unobserved-destination": [
+      "M8",
+      "M9",
+      "M13"
+    ],
+    "unpaid-cross-promotion": [
+      "M15"
+    ],
+    "reciprocal-promotional-sharing": [
+      "M5",
+      "M15"
+    ],
+    "unresolved-promotional-sharing": [
+      "M5",
+      "M15"
+    ],
+    "cross-promotion-fee": [
+      "M4",
+      "M15"
+    ],
+    "interest-handover": [
+      "M16"
+    ],
+    "paid-handover-label": [
+      "M3",
+      "M16"
+    ],
+    "branded-content-claim": [
+      "M4",
+      "M17"
+    ],
+    "content-purchase-context": [
+      "M4"
+    ],
+    "ordinary-product-sale": [
+      "M2"
+    ],
+    "optional-engagement": [
+      "M5",
+      "M6"
+    ],
+    "giveaway-no-engagement": [
+      "M5"
+    ],
+    "quoted-warning": [
+      "M3",
+      "M5"
+    ],
+    "deny-despite-instruction": [
+      "M5"
+    ],
+    "allow-despite-instruction": [
+      "M15"
+    ],
+    "vague-handover": [
+      "M3",
+      "M16"
+    ],
+    "activity-frequency-claim": [
+      "M1"
+    ],
+    "claimed-newsworthiness": [
+      "M5",
+      "M18"
+    ]
+  },
+  "dependencies": [
+    {
+      "url": "https://www.facebook.com/business/help/221149188908254",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://about.fb.com/news/2017/08/news-feed-fyi-addressing-cloaking-so-people-see-more-authentic-posts/",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://transparency.meta.com/policies/community-standards/",
+      "status": "unresolved"
+    },
+    {
+      "url": "https://transparency.meta.com/features/approach-to-newsworthy-content/",
+      "status": "unresolved"
+    }
+  ],
+  "limitations": [
+    "Selected English Facebook proposal-text checks only; not full Meta compliance, endorsement, maintainer semantic approval or hosted eligibility.",
+    "Authored candidate and synthetic expected rule evidence, without model-classified cases or qualified automated retrieval/freshness.",
+    "No account, authority, history, frequency, destination, link behavior or factual claim is verified.",
+    "The complete monetary-content-exchange category and branded-content exception remain deferred; a creator fee alone must not trigger these selected trade/gate rules.",
+    "Reciprocal promotional sharing can be unpaid cross-promotion; pure metric trades are distinct. Unresolved purpose/payment/overlap defaults to review, not deny.",
+    "A relevant unresolved platform-approval/newsworthiness claim requires review, never allow; the candidate does not authenticate such claims.",
+    "Other source requirements and linked policies remain unresolved even when a selected positive exception matches.",
+    "No new semantic study case admission or financial reservation is created by this candidate."
+  ]
+}
