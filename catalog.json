@@ -391,7 +391,7 @@
         "date": "2026-10-22",
         "result": "readable"
       },
-      "scope_notes": "Detailed English source publicly rendered; final observed URL has no .html suffix. Covers account, behavior and content authenticity, with explicit exceptions. Account/profile history, automation authorization, reporting intent and media/link evidence cannot be established from a single text. Source registration only; no executable version."
+      "scope_notes": "Detailed English source publicly rendered; final observed URL has no .html suffix. Covers account, behavior and content authenticity, with explicit exceptions. Account/profile history, automation authorization, reporting intent and media/link evidence cannot be established from a single text. Authored selected-text candidate only; no semantic qualification or currently servable version."
     }
   ],
   "versions": [
@@ -441,6 +441,23 @@
         "fixtures.json": "sha256:7e8a088efb327f451cbe7e3a143ad419a4500bd3c82d69095553a2e9b367c58c",
         "policy.json": "sha256:50deaf79cd8c56173c895a523d55b377de5c89d42ba0f16917c4e95805dfcde3",
         "provenance.json": "sha256:8b18449e55bdc98189c170887915175095b5af780e0fee0ea0d9dab2afe6f036"
+      },
+      "cli_version": "0.7.0",
+      "case_count": 28,
+      "semantic_evaluation": "not_evaluated"
+    },
+    {
+      "source_id": "x-authenticity",
+      "version_id": "2026-10-23.1",
+      "policy_digest": "sha256:ff6cc375db771fdc3f13b930069c205290317248553daecac141b29fa7323774",
+      "state": "candidate",
+      "files": {
+        "README.md": "sha256:b0fda3d3f533bcabb838104659f47128a0e594bc9b2e3aeb15cea4af132ce756",
+        "cases.json": "sha256:d712b9aff0fa8815537fa3a6b119a8a31921b7f89ae20b2a07df97c12eb10bde",
+        "coverage.json": "sha256:0979fa18b6140f43c0171aeb2eb8b5c5f8b2e80a5bd232f33d6aea4a3b683d56",
+        "fixtures.json": "sha256:ff2b15ea98ea4001ca8b3e95e8370314f90cc8dcea55214297d6daa62193796c",
+        "policy.json": "sha256:202386f0d1a402aa950f247456b2fdd29bdc0f7d7cb6d0f49bdbce128fd1cea1",
+        "provenance.json": "sha256:3d9695ab127fbc4a374b9a6e5f16e3797a201bd1b67b288e5033542e73c00fc7"
       },
       "cli_version": "0.7.0",
       "case_count": 28,

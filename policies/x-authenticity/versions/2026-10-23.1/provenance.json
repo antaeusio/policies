@@ -1,0 +1,35 @@
+{
+  "schema_version": "2",
+  "source_id": "x-authenticity",
+  "version_id": "2026-10-23.1",
+  "source_url": "https://help.x.com/en/rules-and-policies/authenticity",
+  "final_url": "https://help.x.com/en/rules-and-policies/authenticity",
+  "language": "en",
+  "region": "No separate regional applicability qualified; selected English proposal-text scope only",
+  "retrieved_at": "2026-10-22T20:00:12.420Z",
+  "source_effective_date": null,
+  "observation": {
+    "method": "browser-dom",
+    "selector": "#main-content > article",
+    "element_index": 0,
+    "matched_elements": 1,
+    "text_property": "innerText",
+    "normalization": "none",
+    "text_sha256": "3fbc4b90408c9075ed2378011534206a39173c83f8cdb3423a803997aba9dfbc",
+    "text_bytes": 15855,
+    "http_response_sha256": null,
+    "response_linkage": "not-established",
+    "authentication": "public-no-sign-in"
+  },
+  "source_snapshot_retained": false,
+  "authoring": {
+    "method": "authored-candidate",
+    "tool": "Codex",
+    "model": "GPT-6 family; exact serving identifier unavailable",
+    "revision": "x-selected-authenticity-text-v1"
+  },
+  "policy_digest": "sha256:ff6cc375db771fdc3f13b930069c205290317248553daecac141b29fa7323774",
+  "cli_version": "0.7.0",
+  "scope": "English input.text describing selected account/access and engagement transactions, services for those transactions and reporting abuse; conditional good-faith reporting positives only; other source requirements deferred",
+  "semantic_evaluation": "not_evaluated"
+}
