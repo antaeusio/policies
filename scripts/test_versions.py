@@ -35,6 +35,87 @@ class CandidateIntegrity(unittest.TestCase):
     def test_candidate_is_consistent(self):
         self.assertEqual(verify_repository(self.root), (25, 1))
 
+    def browser_provenance(self):
+        # Synthetic metadata only: never a real source observation or new artifact.
+        value = json.loads((self.folder / "provenance.json").read_text())
+        value["schema_version"] = "2"
+        for key in ["response_sha256", "extracted_text_sha256", "extractor"]:
+            del value[key]
+        value["observation"] = {
+            "method": "browser-dom", "selector": ".synthetic-article", "element_index": 0,
+            "matched_elements": 2, "text_property": "innerText", "normalization": "none",
+            "text_sha256": hashlib.sha256(b"Synthetic observation.").hexdigest(), "text_bytes": 22,
+            "http_response_sha256": None, "response_linkage": "not-established",
+            "authentication": "public-no-sign-in",
+        }
+        return value
+
+    def test_browser_observation_candidate_is_offline_only_and_consistent(self):
+        value = self.browser_provenance()
+        self.rewrite("provenance.json", lambda p: (p.clear(), p.update(value)))
+        self.assertEqual(verify_repository(self.root), (25, 1))
+        self.assertEqual(self.entry["state"], "candidate")
+        self.assertEqual(self.entry["semantic_evaluation"], "not_evaluated")
+
+    def test_browser_observation_cannot_assert_a_response_chain_or_private_session(self):
+        original = self.browser_provenance()
+        for key, value in [("http_response_sha256", "a" * 64), ("response_linkage", "verified"),
+                           ("method", "https-response"), ("text_property", "innerHTML"),
+                           ("normalization", "trim"), ("authentication", "signed-in"),
+                           ("selector", " "), ("selector", "x" * 1001),
+                           ("cookie", "synthetic-value"), ("text", "Third-party snapshot")]:
+            with self.subTest(field=key):
+                replacement = copy.deepcopy(original)
+                replacement["observation"][key] = value
+                self.rewrite("provenance.json", lambda p: (p.clear(), p.update(replacement)))
+                with self.assertRaises(ValueError):
+                    verify_repository(self.root)
+
+    def test_browser_observation_requires_bounded_exact_identity(self):
+        original = self.browser_provenance()
+        for key, value in [("matched_elements", True), ("matched_elements", 0), ("matched_elements", 257),
+                           ("element_index", False), ("element_index", -1), ("element_index", 2),
+                           ("text_bytes", True), ("text_bytes", 0), ("text_bytes", 1048577),
+                           ("text_sha256", "sha256:" + "a" * 64), ("text_sha256", "A" * 64)]:
+            with self.subTest(field=key, value=value):
+                replacement = copy.deepcopy(original)
+                replacement["observation"][key] = value
+                self.rewrite("provenance.json", lambda p: (p.clear(), p.update(replacement)))
+                with self.assertRaisesRegex(ValueError, "browser observation identity"):
+                    verify_repository(self.root)
+
+    def test_browser_and_response_provenance_formats_cannot_be_mixed(self):
+        original = self.browser_provenance()
+        for change in [{"response_sha256": "a" * 64}, {"extracted_text_sha256": "a" * 64},
+                       {"extractor": "fake-http-chain"}, {"schema_version": "1"}, {"schema_version": "3"}]:
+            with self.subTest(change=change):
+                replacement = copy.deepcopy(original)
+                replacement.update(change)
+                self.rewrite("provenance.json", lambda p: (p.clear(), p.update(replacement)))
+                with self.assertRaises(ValueError):
+                    verify_repository(self.root)
+
+    def test_browser_format_does_not_bypass_common_candidate_assertions(self):
+        original = self.browser_provenance()
+        for change in [{"source_url": "https://example.org/other"}, {"semantic_evaluation": "passed"},
+                       {"source_snapshot_retained": True}, {"cli_version": "0.6.0"},
+                       {"authoring": {"method": "generated", "tool": "synthetic", "model": "synthetic", "revision": "synthetic"}},
+                       {"schema_version": []}]:
+            with self.subTest(change=change):
+                replacement = copy.deepcopy(original)
+                replacement.update(change)
+                self.rewrite("provenance.json", lambda p: (p.clear(), p.update(replacement)))
+                with self.assertRaises(ValueError):
+                    verify_repository(self.root)
+
+    def test_browser_provenance_cannot_replace_published_format_one_history(self):
+        previous = copy.deepcopy(self.catalog)
+        value = self.browser_provenance()
+        self.rewrite("provenance.json", lambda p: (p.clear(), p.update(value)))
+        with patch("verify.subprocess.check_output", return_value=json.dumps(previous).encode()):
+            with self.assertRaisesRegex(ValueError, "published version altered"):
+                verify_repository(self.root, base_ref="trusted-base")
+
     def test_changed_bytes_are_detected(self):
         with (self.folder / "README.md").open("a") as stream:
             stream.write("altered")

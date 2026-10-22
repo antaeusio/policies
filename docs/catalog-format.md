@@ -29,7 +29,44 @@ The policy, RegressionSuite and FixtureSet follow the released Antaeus
 contracts. Repository metadata is separate. Provenance sidecar format `1`
 records exact source/final URL, language, observed region/date, source hashes,
 extractor, source-retention statement, authored identity, policy digest, CLI
-version, scope and semantic status. Coverage sidecar format `1` identifies each
+version, scope and semantic status. It describes direct-response extraction.
+Published format-1 files stay immutable.
+
+Provenance sidecar format `2` records a **manual public browser observation**.
+It retains the same identity/date/language/region/authoring/scope fields and
+replaces `response_sha256`, `extracted_text_sha256` and `extractor` with exactly
+one `observation` object:
+
+| Field | Required value or meaning |
+| --- | --- |
+| `method` | `browser-dom` |
+| `selector` | Bounded CSS selector, recorded as data; never executed by verification. |
+| `element_index` | Zero-based selected match, less than `matched_elements`. |
+| `matched_elements` | Observed count, from 1 through 256. |
+| `text_property` | `innerText` |
+| `normalization` | `none`; hash exactly the UTF-8 encoding of the observed string. |
+| `text_sha256` | Lowercase 64-character digest, without a prefix. |
+| `text_bytes` | Positive observed UTF-8 byte count, at most 1 MiB. |
+| `http_response_sha256` | `null`; no response bytes are linked to this observation. |
+| `response_linkage` | `not-established` |
+| `authentication` | `public-no-sign-in`; observations requiring sign-in are not admitted. |
+
+A browser can render policy clauses absent from an ordinary HTML fetch. The
+browser observation must not borrow that other response's hash, claim a direct
+extraction chain, or establish safe automated retrieval. Record the selector,
+selected index, match count and exact method at observation time. Visible source
+language and regional applicability still need review. Do not retain page text,
+HTML, cookies, session identifiers or request headers in the sidecar. Separate
+HTTP observations may be documented privately as separate observations.
+
+Offline verification checks the metadata's shape and artifact bindings; it does
+not retrieve the page or prove that an observation happened or remains current.
+Format `2` still permits only authored, unqualified candidates. It does not
+change catalog format `2`, coverage format `1`, portable contracts, semantic
+status, recommendation, source freshness or service eligibility. Consumers
+supporting only format `1` must refuse format `2` until explicitly updated.
+
+Coverage sidecar format `1` identifies each
 clause as converted, context-dependent, unsupported or outside scope, with
 reasons, references to converted rules, case-to-clause references, unresolved
 dependencies and limitations. Every rule needs a converted clause. Deferred
