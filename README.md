@@ -17,6 +17,13 @@ is recommended or currently servable. Source registrations remain an import
 queue. A reachable overview page can still require linked documents or account
 facts. Offline fixtures verify bindings and reduction; they do not classify text.
 
+The first live eBay study [stopped on a mismatched result](reports/ebay-chance-listings/2026-10-23-semantic-stop/README.md)
+on 23 October 2026. Four of 24 planned content cases ran: three final outcomes
+matched and a described mystery-box offer was incorrectly denied against its
+frozen expectation. Twenty cases remain unrun. The candidate remains
+unqualified; the dated report preserves the result without changing the
+immutable artifact or its historical provenance.
+
 | State | Meaning |
 | --- | --- |
 | `registered` | Source URL is recorded; `current_version` is null. |

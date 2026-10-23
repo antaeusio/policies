@@ -1,0 +1,460 @@
+{
+  "schema": "dated-semantic-observation-v1",
+  "observedDate": "2026-10-23",
+  "sourceId": "ebay-chance-listings",
+  "versionId": "2026-10-22.1",
+  "artifactCommit": "79f9b79fa90e60b7f0fb4eebd8941327cf95dd7c",
+  "policyDigest": "sha256:9d57f466cdf2a9db06672befdb4bbf8c99bb88acfb6df59f2cc4c856da330f3f",
+  "caseFileSha256": "sha256:739db152978a8dc2bac9d93a50d43c1264f7614bd0e0bc73aa6a99b96236ea3a",
+  "engineVersion": "v0.7.0 (73f5127ad6b8)",
+  "evaluator": {
+    "provider": "antaeus",
+    "model": "antaeus-semantic-v3",
+    "adapter": "io.antaeus.systemone",
+    "adapterVersion": "0.4.0",
+    "profileDigest": "sha256:467e77e77fa68364f66bfff75d011855efd2250c7b7ac0897edd2b3404f3c6b8",
+    "confidenceThreshold": 0.7,
+    "maximumAttemptsPerCase": 2,
+    "revisionAvailable": false,
+    "identityScope": "Observed Antaeus alias; underlying provider/model revision is not exposed by the projected response."
+  },
+  "status": "halted-on-mismatch",
+  "plannedContentCases": 24,
+  "executedContentCases": 4,
+  "matchingFinalOutcomes": 3,
+  "mismatchedFinalOutcomes": 1,
+  "unrunContentCases": 20,
+  "eligibleForChecks": false,
+  "qualification": "failed-incomplete-study",
+  "rootCause": "not-established",
+  "interpretation": "A matching final outcome does not establish correctness of every rule result. This stopped batch is not an accuracy estimate.",
+  "cases": [
+    {
+      "caseId": "raffle-ticket",
+      "input": {
+        "text": "Buy one $8 ticket. One ticket holder wins the bicycle; everyone else receives nothing."
+      },
+      "expectedOutcome": "deny",
+      "observedOutcome": "deny",
+      "matches": true,
+      "decisionDigest": "sha256:d04fbd80100618472330211fd9e74eee7e619886482d8db7dd5cb4a4c0f1c801",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.9843
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "evaluation.low_confidence"
+          ],
+          "confidence": 0.5096
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.9431
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.7616
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.9786
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.8362
+        }
+      ],
+      "accounting": {
+        "known": true,
+        "reportedInputTokens": 522,
+        "reportedOutputTokens": 156
+      },
+      "executionTrace": {
+        "version": "v0alpha1",
+        "terminal": "evaluation.unresolved_rule",
+        "attempts": [
+          {
+            "evaluatorId": "antaeus-semantic-v3",
+            "adapterId": "io.antaeus.systemone",
+            "adapterVersion": "0.4.0",
+            "route": "primary",
+            "attempt": 1,
+            "ruleIndexes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "code": "evaluation.succeeded",
+            "latencyMs": 428,
+            "provider": "antaeus",
+            "requestedModel": "antaeus-semantic-v3",
+            "resolvedModel": "antaeus-semantic-v3",
+            "revisionAvailable": false
+          }
+        ]
+      },
+      "providerUsage": {
+        "version": "v0alpha1",
+        "attempts": [
+          {
+            "traceIndex": 0,
+            "status": "reported",
+            "inputTokens": 522,
+            "outputTokens": 156,
+            "executionCode": "evaluation.succeeded"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "contest-prize",
+      "input": {
+        "text": "Pay $12 to enter our trivia contest. The highest score wins this camera."
+      },
+      "expectedOutcome": "deny",
+      "observedOutcome": "deny",
+      "matches": true,
+      "decisionDigest": "sha256:daf95f0a1197a335f40db5cd4459ace3985f9a844891a5de3cdd92edc8b0d592",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.9759
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.8355
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.9365
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.83
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.9436
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.7681
+        }
+      ],
+      "accounting": {
+        "known": true,
+        "reportedInputTokens": 521,
+        "reportedOutputTokens": 154
+      },
+      "executionTrace": {
+        "version": "v0alpha1",
+        "terminal": "completed",
+        "attempts": [
+          {
+            "evaluatorId": "antaeus-semantic-v3",
+            "adapterId": "io.antaeus.systemone",
+            "adapterVersion": "0.4.0",
+            "route": "primary",
+            "attempt": 1,
+            "ruleIndexes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "code": "evaluation.succeeded",
+            "latencyMs": 481,
+            "provider": "antaeus",
+            "requestedModel": "antaeus-semantic-v3",
+            "resolvedModel": "antaeus-semantic-v3",
+            "revisionAvailable": false
+          }
+        ]
+      },
+      "providerUsage": {
+        "version": "v0alpha1",
+        "attempts": [
+          {
+            "traceIndex": 0,
+            "status": "reported",
+            "inputTokens": 521,
+            "outputTokens": 154,
+            "executionCode": "evaluation.succeeded"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "random-winner-paraphrase",
+      "input": {
+        "text": "Your payment puts your name in a hat. We pick one name for the guitar."
+      },
+      "expectedOutcome": "deny",
+      "observedOutcome": "deny",
+      "matches": true,
+      "decisionDigest": "sha256:526a6fa82aff28403415fefdc00b41d578bb3a030d83238b00d74a68eb8bffa5",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.9896
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.8979
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.9021
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "evaluation.low_confidence"
+          ],
+          "confidence": 0.6326
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.8688
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.9027000000000001
+        }
+      ],
+      "accounting": {
+        "known": true,
+        "reportedInputTokens": 521,
+        "reportedOutputTokens": 156
+      },
+      "executionTrace": {
+        "version": "v0alpha1",
+        "terminal": "evaluation.unresolved_rule",
+        "attempts": [
+          {
+            "evaluatorId": "antaeus-semantic-v3",
+            "adapterId": "io.antaeus.systemone",
+            "adapterVersion": "0.4.0",
+            "route": "primary",
+            "attempt": 1,
+            "ruleIndexes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "code": "evaluation.succeeded",
+            "latencyMs": 708,
+            "provider": "antaeus",
+            "requestedModel": "antaeus-semantic-v3",
+            "resolvedModel": "antaeus-semantic-v3",
+            "revisionAvailable": false
+          }
+        ]
+      },
+      "providerUsage": {
+        "version": "v0alpha1",
+        "attempts": [
+          {
+            "traceIndex": 0,
+            "status": "reported",
+            "inputTokens": 521,
+            "outputTokens": 156,
+            "executionCode": "evaluation.succeeded"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "mystery-general-contents",
+      "input": {
+        "text": "Each mystery stationery box contains six unused notebooks and two pens. Cover colors vary. No bonus or prize is offered."
+      },
+      "expectedOutcome": "allow",
+      "observedOutcome": "deny",
+      "matches": false,
+      "decisionDigest": "sha256:2f2a51f4252ad40d523e925e2c5eb295deb2b23b5a2a70d43274bd4b50497875",
+      "ruleResults": [
+        {
+          "ruleId": "chance-entry",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.9557
+        },
+        {
+          "ruleId": "unequal-bonuses",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "deny",
+          "confidence": 0.8225
+        },
+        {
+          "ruleId": "undisclosed-mystery-contents",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "evaluation.low_confidence"
+          ],
+          "confidence": 0.6678
+        },
+        {
+          "ruleId": "selective-valuable-item",
+          "status": "not_matched",
+          "reasonCodes": [
+            "systemone.not_matched"
+          ],
+          "confidence": 0.9615
+        },
+        {
+          "ruleId": "described-mystery-offer",
+          "status": "matched",
+          "reasonCodes": [
+            "systemone.matched"
+          ],
+          "outcome": "allow",
+          "confidence": 0.9829
+        },
+        {
+          "ruleId": "uniform-bonus-offer",
+          "status": "indeterminate",
+          "reasonCodes": [
+            "evaluation.low_confidence"
+          ],
+          "confidence": 0.6551
+        }
+      ],
+      "accounting": {
+        "known": true,
+        "reportedInputTokens": 528,
+        "reportedOutputTokens": 156
+      },
+      "executionTrace": {
+        "version": "v0alpha1",
+        "terminal": "evaluation.unresolved_rule",
+        "attempts": [
+          {
+            "evaluatorId": "antaeus-semantic-v3",
+            "adapterId": "io.antaeus.systemone",
+            "adapterVersion": "0.4.0",
+            "route": "primary",
+            "attempt": 1,
+            "ruleIndexes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "code": "evaluation.succeeded",
+            "latencyMs": 364,
+            "provider": "antaeus",
+            "requestedModel": "antaeus-semantic-v3",
+            "resolvedModel": "antaeus-semantic-v3",
+            "revisionAvailable": false
+          }
+        ]
+      },
+      "providerUsage": {
+        "version": "v0alpha1",
+        "attempts": [
+          {
+            "traceIndex": 0,
+            "status": "reported",
+            "inputTokens": 528,
+            "outputTokens": 156,
+            "executionCode": "evaluation.succeeded"
+          }
+        ]
+      }
+    }
+  ]
+}
